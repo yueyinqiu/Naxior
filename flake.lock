@@ -33,6 +33,24 @@
         "type": "github"
       }
     },
+    "nix-daemon-proxy-switchboard": {
+      "inputs": {
+        "proxy-switchboard": "proxy-switchboard"
+      },
+      "locked": {
+        "lastModified": 1795191344,
+        "narHash": "sha256-/JDEq9vUZPdJK0zYLwevrr5AAXVUmNHITaz3hJHMaP8=",
+        "owner": "yueyinqiu",
+        "repo": "NixDaemonProxySwitchboard",
+        "rev": "836a91f6b2559af88b2d97bf6810cbd9d2c2963b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yueyinqiu",
+        "repo": "NixDaemonProxySwitchboard",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1794840529,
@@ -51,6 +69,22 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1794890597,
+        "narHash": "sha256-lME2lHoDHAaSHP3/okgiVoJ0icVEvsQH8LeU3We7tcc=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "04906337b6d53e8bb0eaf0470ae9f070a4d4eb55",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1795234589,
         "narHash": "sha256-f/VVvxf5RsQgWVhUtefoca5ktVg0DA2bnkMOcmSnozo=",
         "owner": "NixOS",
@@ -65,11 +99,30 @@
         "type": "github"
       }
     },
+    "proxy-switchboard": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1795190907,
+        "narHash": "sha256-7OZFtD1TEjyc7u+cl63f7XWiUEiWGcK8XYQRiE3V8E4=",
+        "owner": "yueyinqiu",
+        "repo": "ProxySwitchboard-Nix",
+        "rev": "da8af8b2411c86aa9b447303be44767642431f71",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yueyinqiu",
+        "repo": "ProxySwitchboard-Nix",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "disko": "disko",
         "import-tree": "import-tree",
-        "nixpkgs": "nixpkgs_2"
+        "nix-daemon-proxy-switchboard": "nix-daemon-proxy-switchboard",
+        "nixpkgs": "nixpkgs_3"
       }
     }
   },

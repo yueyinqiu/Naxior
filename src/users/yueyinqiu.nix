@@ -40,6 +40,7 @@ in
     extraGroups = [
       "wheel"
       "networkmanager"
+      "nix-daemon-proxy"
     ];
     openssh.authorizedKeys.keys = [
       # yueyinqiu@erthane

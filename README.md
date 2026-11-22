@@ -10,7 +10,7 @@
 - **`nvme0n1`（Samsung 970 EVO 1TB NVMe）**：系统盘，disko 重写为 `ESP(512M) + root(余下)`。
 - **`sda`（HGST 4TB 机械盘）**：整盘作为数据盘，挂载到 `/data`。
 
-> 两块盘的 by-id 已写死在 `src/storage/disko.nix`，装机前请再确认一次 `ls -la /dev/disk/by-id`。
+> 两块盘的 by-id 已写死在 `src/hardware/disko.nix`，装机前请再确认一次 `ls -la /dev/disk/by-id`。
 
 ## 装机（disko）
 
@@ -22,7 +22,7 @@ nix develop
 
 # 2. 分区并格式化（会清空目标盘，务必确认 device 指对了）
 nix --extra-experimental-features 'nix-command flakes' run \
-  github:nix-community/disko -- --mode disko ./src/storage/disko.nix
+  github:nix-community/disko -- --mode disko ./src/hardware/disko.nix
 
 # 3. 把分区挂载起来（disko 会生成挂载，也可用 disko --mode mount）
 

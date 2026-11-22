@@ -4,6 +4,7 @@
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     disko.url = "github:nix-community/disko";
+    nix-daemon-proxy-switchboard.url = "github:yueyinqiu/NixDaemonProxySwitchboard";
   };
 
   outputs = inputs: {
@@ -16,6 +17,7 @@
         specialArgs = { };
         modules = [
           inputs.disko.nixosModules.disko
+          inputs.nix-daemon-proxy-switchboard.nixosModules.nix-daemon-proxy-switchboard
           (inputs.import-tree ./src)
         ];
       };
