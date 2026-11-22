@@ -3,7 +3,6 @@
 }:
 {
   disko.devices = {
-    # 系统盘：Samsung 970 EVO 1TB（NVMe）
     disk.nvme = {
       device = "/dev/disk/by-id/nvme-eui.00253858014303d9";
       type = "disk";
@@ -35,7 +34,6 @@
       };
     };
 
-    # 数据盘：HGST 4TB（机械盘），整盘用作 /data
     disk.sda = {
       device = "/dev/disk/by-id/wwn-0x5000cca0bcd0e4fb";
       type = "disk";
