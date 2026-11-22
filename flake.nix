@@ -1,5 +1,7 @@
 {
   inputs = {
+    import-tree.url = "github:denful/import-tree";
+
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     disko.url = "github:nix-community/disko";
   };
@@ -11,11 +13,10 @@
       in
       inputs.nixpkgs.lib.nixosSystem {
         system = system;
-        specialArgs = {
-          flake-inputs = inputs;
-        };
+        specialArgs = { };
         modules = [
-          ./naxior
+          inputs.disko.nixosModules.disko
+          (inputs.import-tree ./src)
         ];
       };
 

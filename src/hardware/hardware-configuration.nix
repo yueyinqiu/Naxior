@@ -3,8 +3,6 @@
 # to /etc/nixos/configuration.nix instead.
 #
 # 注：fileSystems 由 disko 生成，这里（以及与 disko 冲突的挂载点）无需再写。
-# 微码根据实际 CPU 调整：Intel 用 hardware.cpu.intel.updateMicrocode，
-# AMD 用 hardware.cpu.amd.updateMicrocode。
 {
   config,
   lib,

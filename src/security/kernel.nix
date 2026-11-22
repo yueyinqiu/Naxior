@@ -1,0 +1,6 @@
+{
+  ...
+}:
+{
+  security.protectKernelImage = true;
+}
