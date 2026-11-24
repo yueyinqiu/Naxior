@@ -38,7 +38,7 @@ in
     isNormalUser = true;
     extraGroups = [
       "wheel"
-      "nix-daemon-proxy"
+      "nix-daemon-proxy-switchboard"
     ];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEp4LM2tDJo8PN+BQcExl+YiaWM/1j4e1vlP+k3iHUDf"

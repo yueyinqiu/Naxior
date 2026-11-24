@@ -38,11 +38,11 @@
         "proxy-switchboard": "proxy-switchboard"
       },
       "locked": {
-        "lastModified": 1795191344,
-        "narHash": "sha256-/JDEq9vUZPdJK0zYLwevrr5AAXVUmNHITaz3hJHMaP8=",
+        "lastModified": 1795509510,
+        "narHash": "sha256-tQNi+0jTD/E2f4rU6lRy95/4lipbNT8SxoUpF22oj4k=",
         "owner": "yueyinqiu",
         "repo": "NixDaemonProxySwitchboard",
-        "rev": "836a91f6b2559af88b2d97bf6810cbd9d2c2963b",
+        "rev": "199d51c6c16b1ed9f498d2f382235bc085a7d006",
         "type": "github"
       },
       "original": {
