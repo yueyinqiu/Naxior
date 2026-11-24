@@ -45,7 +45,7 @@ in
     ];
   };
 
-#  security.audit.rules = map (w: "-w ${home}/${w.path} -p wa -k yueyinqiu") watched;
+  security.audit.rules = map (w: "-w ${home}/${w.path} -p wa -k yueyinqiu") watched;
 
   systemd.tmpfiles.rules = map (w: "d ${home}/${w.path} ${w.mode} yueyinqiu users -") watched;
 }
