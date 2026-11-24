@@ -4,11 +4,7 @@ let
 
   watched = [
     {
-      path = ".config/systemd/user";
-      mode = "0755";
-    }
-    {
-      path = ".local/share/systemd/user";
+      path = ".config";
       mode = "0755";
     }
     {
@@ -20,6 +16,23 @@ let
       mode = "0755";
     }
     {
+      path = ".config/systemd";
+      mode = "0755";
+    }
+    {
+      path = ".config/systemd/user";
+      mode = "0755";
+    }
+
+    {
+      path = ".local";
+      mode = "0755";
+    }
+    {
+      path = ".local/share";
+      mode = "0755";
+    }
+    {
       path = ".local/share/applications";
       mode = "0755";
     }
@@ -28,8 +41,12 @@ let
       mode = "0755";
     }
     {
-      path = ".ssh";
-      mode = "0700";
+      path = ".local/share/systemd";
+      mode = "0755";
+    }
+    {
+      path = ".local/share/systemd/user";
+      mode = "0755";
     }
   ];
 in
