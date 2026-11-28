@@ -40,6 +40,16 @@ let
       watch = false;
     }
     {
+      path = ".local/share/dbus-1";
+      mode = "0755";
+      watch = false;
+    }
+    {
+      path = ".local/share/dbus-1/services";
+      mode = "0755";
+      watch = true;
+    }
+    {
       path = ".local/share/applications";
       mode = "0755";
       watch = true;
