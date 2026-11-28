@@ -2,53 +2,66 @@
 let
   home = config.users.users.yueyinqiu.home;
 
-  watched = [
+  dirs = [
     {
       path = ".config";
       mode = "0755";
+      watch = false;
     }
     {
       path = ".config/autostart";
       mode = "0755";
+      watch = true;
     }
     {
       path = ".config/environment.d";
       mode = "0755";
+      watch = true;
     }
     {
       path = ".config/systemd";
       mode = "0755";
+      watch = false;
     }
     {
       path = ".config/systemd/user";
       mode = "0755";
+      watch = true;
     }
 
     {
       path = ".local";
       mode = "0755";
+      watch = false;
     }
     {
       path = ".local/share";
       mode = "0755";
+      watch = false;
     }
     {
       path = ".local/share/applications";
       mode = "0755";
+      watch = true;
     }
     {
       path = ".local/share/nix";
       mode = "0755";
+      watch = true;
     }
     {
       path = ".local/share/systemd";
       mode = "0755";
+      watch = false;
     }
     {
       path = ".local/share/systemd/user";
       mode = "0755";
+      watch = true;
     }
   ];
+
+  watched = builtins.filter (d: d.watch) dirs;
 in
 {
   users.users.yueyinqiu = {
@@ -64,5 +77,5 @@ in
 
   security.audit.rules = map (w: "-w ${home}/${w.path} -p wa -k yueyinqiu") watched;
 
-  systemd.tmpfiles.rules = map (w: "d ${home}/${w.path} ${w.mode} yueyinqiu users -") watched;
+  systemd.tmpfiles.rules = map (d: "d ${home}/${d.path} ${d.mode} yueyinqiu users -") dirs;
 }
