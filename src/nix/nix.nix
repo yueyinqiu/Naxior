@@ -22,6 +22,7 @@
     "https://niri-epireyn.cachix.org"
     "https://nix-gaming.cachix.org"
     "https://comfyui.cachix.org"
+    "https://cache.nixos-cuda.org"
   ];
 
   nix.settings.trusted-public-keys = [
@@ -34,5 +35,6 @@
     "niri-epireyn.cachix.org-1:tlVyFN7CtsDT+ZcLPS+ekFWeT1X6X4OqvWqbBMyIzFA="
     "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
     "comfyui.cachix.org-1:33mf9VzoIjzVbp0zwj+fT51HG0y31ZTK3nzYZAX0rec="
+    "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="
   ];
 }
