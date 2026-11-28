@@ -2,7 +2,7 @@
 let
   home = config.users.users.yueyinqiu.home;
 
-  dirs = [
+  audit = [
     {
       path = ".config";
       mode = "0755";
@@ -70,8 +70,6 @@ let
       watch = true;
     }
   ];
-
-  watched = builtins.filter (d: d.watch) dirs;
 in
 {
   users.users.yueyinqiu = {
@@ -85,7 +83,7 @@ in
     ];
   };
 
-  security.audit.rules = map (w: "-w ${home}/${w.path} -p wa -k yueyinqiu") watched;
+  security.audit.rules = map (w: "-w ${home}/${w.path} -p wa -k yueyinqiu") (builtins.filter (d: d.watch) audit);
 
-  systemd.tmpfiles.rules = map (d: "d ${home}/${d.path} ${d.mode} yueyinqiu users -") dirs;
+  systemd.tmpfiles.rules = map (d: "d ${home}/${d.path} ${d.mode} yueyinqiu users -") audit;
 }
